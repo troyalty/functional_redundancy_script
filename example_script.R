@@ -1,9 +1,9 @@
-#Example code demonstrating how to use the parameteric_fucntional_redundancy
+#Example code demonstrating how to use the TCE_fucntional_redundancy
 #function. This example script analyzes a 10 taxa community and the associated
 #trait levels
 
-#define filepath to parametric_functional_redundancy function
-source("R/parametric_functional_redundancy.R")
+#define filepath to TCE_functional_redundancy function
+source("R/TCE_functional_redundancy.R")
 
 
 #create a vector of relative abundances using a lognormal community structure (equation 8)
