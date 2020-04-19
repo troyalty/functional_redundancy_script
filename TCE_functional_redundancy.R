@@ -1,4 +1,4 @@
-parametric_functional_redundancy<-function(abundance,trait,alpha.range=seq(0,2,by=0.1)){
+TCE_functional_redundancy<-function(abundance,trait,alpha.range=seq(0,2,by=0.1)){
   
   #Equation 3 and 4
   trait.contribution<-abundance*trait/sum(abundance*trait)
@@ -8,7 +8,7 @@ parametric_functional_redundancy<-function(abundance,trait,alpha.range=seq(0,2,b
   n.alpha<-length(alpha.range)
   indx<-1
   
-  parametric_fr<-data.frame(parametric.fr=rep(NaN,n.alpha),
+  TCE_fr<-data.frame(TCE.fr=rep(NaN,n.alpha),
                             parametric.diversity=rep(NaN,n.alpha),
                             alpha=rep(NaN,n.alpha))
   
@@ -29,14 +29,14 @@ parametric_functional_redundancy<-function(abundance,trait,alpha.range=seq(0,2,b
       }
       parametric_fr$alpha[indx]<-alpha
       parametric_fr$parametric.diversity[indx]<-parametric.diversity
-      parametric_fr$parametric.fr[indx]<-evenness
+      parametric_fr$TCE.fr[indx]<-evenness
       indx<-indx+1
     }
   } else {
     parametric_fr$alpha[indx]<-alpha
     parametric_fr$parametric.diversity[indx]<-NaN
-    parametric_fr$parametric.fr[indx]<-NaN
+    parametric_fr$TCE.fr[indx]<-NaN
   }
   
-  return(parametric_fr)
+  return(TCE_fr)
 }
