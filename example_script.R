@@ -21,7 +21,7 @@ trait<-c(1,3,10,2,0,0,1,7,2,0)
 
 #equation 5-7
 alpha<-c(0,0.5,1,2) #choose a vector of alphas
-parametric_functional_redundancy(abundance,trait,alpha)
+TCE_functional_redundancy(abundance,trait,alpha)
 
 
 
