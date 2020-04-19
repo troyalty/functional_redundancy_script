@@ -27,15 +27,15 @@ TCE_functional_redundancy<-function(abundance,trait,alpha.range=seq(0,2,by=0.1))
         #equation 7
         evenness<-parametric.diversity/parametric.diversity.even
       }
-      parametric_fr$alpha[indx]<-alpha
-      parametric_fr$parametric.diversity[indx]<-parametric.diversity
-      parametric_fr$TCE.fr[indx]<-evenness
+      TCE_fr$alpha[indx]<-alpha
+      TCE_fr$parametric.diversity[indx]<-parametric.diversity
+      TCE_fr$TCE.fr[indx]<-evenness
       indx<-indx+1
     }
   } else {
-    parametric_fr$alpha[indx]<-alpha
-    parametric_fr$parametric.diversity[indx]<-NaN
-    parametric_fr$TCE.fr[indx]<-NaN
+    TCE_fr$alpha[indx]<-alpha
+    TCE_fr$parametric.diversity[indx]<-NaN
+    TCE_fr$TCE.fr[indx]<-NaN
   }
   
   return(TCE_fr)
